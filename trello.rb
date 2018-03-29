@@ -1,30 +1,24 @@
 #!/usr/bin/env ruby
 
 require 'playwright/cli'
+require 'uri'
+
 require_relative 'lib/version'
+require_relative 'lib/set'
+require_relative 'lib/open'
+require_relative 'lib/url'
 
 module Trello
   module CLI
     module Commands
       extend Playwright::CLI::Registry
 
-      class Greet < Playwright::CLI::Command
-        desc "Says a greeting to the name given. This is an example."
+      TRELLO_FILE = '.trello'.freeze
 
-        argument :name, required: true, desc: 'Whom shall I greet?'
-
-        example [
-          "\"Johnny Boy\" #=> Why, hello Johnny Boy!"
-        ]
-
-        def call(name:, **)
-          puts "Why, hello #{name}!"
-        end
-
-      end
-
-      register 'greet', Greet
-      register 'version', Version, aliases: ['v', '-v', '--version']
+      register 'set',       Set,      aliases: ['s']
+      register 'open',      Open,     aliases: ['o']
+      register 'url',       Url,      aliases: ['cat', 'echo']
+      register 'version',   Version,  aliases: ['v', '-v', '--version']
 
     end
   end
