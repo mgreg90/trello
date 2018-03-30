@@ -1,7 +1,7 @@
 module Trello
   module CLI
 
-    VERSION = "0.0.1"
+    VERSION = "0.0.2"
 
     module Commands
       extend Playwright::CLI::Registry
@@ -12,7 +12,7 @@ module Trello
         example ["#=> #{VERSION}"]
 
         def call(**)
-          puts VERSION
+          display.print VERSION
         end
 
       end

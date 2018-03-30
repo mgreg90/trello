@@ -5,6 +5,8 @@ module Trello
       extend Playwright::CLI::Registry
 
       class Url < Playwright::CLI::Command
+        desc "Prints the currently saved trello url"
+
         def call(**)
           fetch_url
           echo_url
@@ -18,8 +20,8 @@ module Trello
         end
 
         def echo_url
-          display.color_print "Your trello url is:"
-          display.color_print @url
+          display.print "Your trello url is:"
+          display.print @url
         end
 
       end

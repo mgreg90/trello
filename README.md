@@ -15,7 +15,7 @@ commands to install it.
 $ gem install playwright-cli
 $ mkdir -p "$HOME/.playwright/plays"
 $ cd "$HOME/.playwright/plays" && git clone git@github.com:mgreg90/trello.git
-$ ln -s trello "$HOME/.playwright/plays/trello/trello.rb" "/usr/local/bin/trello"
+$ ln -s "$HOME/.playwright/plays/trello/trello.rb" "/usr/local/bin/trello"
 ```
 
 In the future, expect a `$ playwright get trello` command to exist.

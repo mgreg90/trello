@@ -19,7 +19,7 @@ module Trello
           @url = url
           validate!
           save_url
-          display.color_print "Trello url set!"
+          display.print "Trello url set!"
         end
 
         private

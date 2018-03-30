@@ -15,7 +15,7 @@ module Trello
 
       TRELLO_FILE = '.trello'.freeze
 
-      register 'set',       Set,      aliases: ['s']
+      register 'set',       Set,      aliases: ['s', 'set-url']
       register 'open',      Open,     aliases: ['o']
       register 'url',       Url,      aliases: ['cat', 'echo']
       register 'version',   Version,  aliases: ['v', '-v', '--version']
